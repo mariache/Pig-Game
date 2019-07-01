@@ -17,26 +17,15 @@ var lastDice;
 document.querySelector('.btn-roll').addEventListener('click', function () {
 
     if (gameIsPlaying){
-        //1. Step
-        //get Random number for dice
         var dice1 = Math.floor(Math.random() * 6) +1;
         var dice2 = Math.floor(Math.random() * 6) +1;
-        //2.
-        //Display the result
+        
         document.querySelector('#dice-0').style.display = 'block';
         document.querySelector('#dice-0').src = 'dice-' + dice1 + '.png';
 
         document.querySelector('#dice-1').style.display = 'block';
         document.querySelector('#dice-1').src = 'dice-' + dice2 + '.png';
 
-        //3.
-        //Update the score if the number wasn't equal to 1
-        // if (dice === 6 && lastDice === 6){
-        //     //Player looses hie score
-        //     scores[activePlayer] = 0;
-        //     document.querySelector('#score-' + activePlayer).textContent = '0';
-        //     nextPlayer();
-        // }else
         if (dice1 !== 1 || dice2 !==1){
             //Add score
             roundScore += dice1 + dice2;
@@ -45,7 +34,6 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
             //Next player
             nextPlayer();
         }
-        // lastDice = dice;
     }
 });
 
