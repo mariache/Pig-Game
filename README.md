@@ -1,7 +1,7 @@
 # Pig-Game
 This simple Pig Game is written on JS
 ###
-pig-game-js.netlify.com
+https://pig-game-js.netlify.com/
 
 GAME RULES:
 
